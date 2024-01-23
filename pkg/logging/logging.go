@@ -72,7 +72,6 @@ func Setup(config LogConfig) {
 	logger = &LogWrapper{ZapLogger: zap.New(core, options...)}
 }
 
-// For mapping config logger to app logger levels
 var loggerLevelMap = map[string]zapcore.Level{
 	"debug":  zapcore.DebugLevel,
 	"info":   zapcore.InfoLevel,

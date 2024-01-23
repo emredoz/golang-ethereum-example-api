@@ -1,12 +1,13 @@
 package settings
 
 import (
-	"github.com/go-playground/validator/v10"
-	"github.com/joho/godotenv"
 	"log"
 	"os"
 	"strconv"
 	"time"
+
+	"github.com/go-playground/validator/v10"
+	"github.com/joho/godotenv"
 )
 
 type App struct {

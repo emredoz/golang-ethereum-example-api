@@ -7,8 +7,8 @@ type ErrorInfo struct {
 }
 
 const (
-	ValidationErrorMessage = "Validation error"
-	BindingErrorMessage    = "Binding error"
-	InternalServiceError   = "InternalServiceError"
-	InvalidAccountAddress  = "InvalidAccountAddress"
+	ValidationErrorMessage            = "validation error"
+	BindingErrorMessage               = "binding error"
+	InternalServiceErrorMessage       = "internal Service Error"
+	InvalidAccountAddressErrorMessage = "invalid Account Address"
 )
