@@ -66,12 +66,14 @@ func Setup() {
 	if err != nil {
 		log.Fatal("READ_TIMEOUT setting is not proper err: %v", err)
 	}
+	
 	ServerSettings.ReadTimeout = time.Duration(ReadTimeout * 1000000000)
 	writeTimeoutStr := os.Getenv("WRITE_TIMEOUT")
 	WriteTimeout, err := strconv.Atoi(writeTimeoutStr)
 	if err != nil {
 		log.Fatal("WRITE_TIMEOUT setting is not proper err: %v", err)
 	}
+	
 	ServerSettings.WriteTimeout = time.Duration(WriteTimeout * 1000000000)
 	ServerSettings.HttpPort, _ = strconv.Atoi(os.Getenv("HTTP_PORT"))
 	ServerSettings.RunMode = os.Getenv("RUN_MODE")
