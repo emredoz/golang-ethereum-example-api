@@ -16,12 +16,12 @@ type TransferControllerConfig struct {
 }
 
 func NewTransferController(c *TransferControllerConfig) {
-	accountController := &TransferController{
+	transferController := &TransferController{
 		Service: c.Service,
 	}
 
 	api := c.R.Group("/api/v1")
-	api.POST("/transfer/send", accountController.SendEthereum)
+	api.POST("/transfer/send", transferController.SendEthereum)
 }
 
 func (s *TransferController) SendEthereum(c *gin.Context) {
